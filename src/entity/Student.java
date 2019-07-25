@@ -26,6 +26,13 @@ public class Student implements RowMapper {
         // 这里的序号是列的序号，以1开始
         student.setId(resultSet.getLong(1));
         student.setName(resultSet.getString(2));
+        /**
+         *  写法2：  不易出错
+         */
+        //student.setId(resultSet.getLong("id"));
+        //student.setName(resultSet.getString("name"));
+        
         return student;
     }
+    
 }
